@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>La Estadística: Métodos que generan valor en la toma decisiones</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Giovany Babativa" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# La Estadística: Métodos que generan valor en la toma decisiones
+## Caso SARS-CoV-2
+### Giovany Babativa
+### 2020/06/05
+
+---
+
+
+
+
+# Introducción
+
+La estadística es una ciencia que aporta en la toma de decisiones en diferentes sectores&lt;sup&gt;1
+--
+
+- Biología: análisis genético - `análisis de datos ómicos`.
+
+--
+
+- Sector Financiero: prevención de fraude - `phishing`.
+
+--
+
+- Marketing: decisiones de publicidad y mercadeo - `Brand Equity`, `Satisfacción de clientes`.
+
+--
+
+- Evaluación de políticas públicas.
+
+--
+
+- Evaluación de la educación: Pruebas `PISA`, `TRI`, cambio de cuadernillo en pruebas `Saber 11`.
+
+--
+
+- Salud: modelos en epidemiología, test de nuevos fármacos. 
+
+.footnote[
+[1] Los campos son mucho más amplios que los mencionados acá.
+]
+---
+# Bioinformática
+
+Los datos de expresión genética, en general son abiertos, [NIF](https://neuinfo.org//), [GEO](https://www.ncbi.nlm.nih.gov/), [FLOW](http://flowrepository.org/). Repositorio de [Bioconductor](https://bioconductor.org/install/) de `R`.
+
+.pull-left[
+&lt;img src="images/Microarrays2.png" width="80%" style="display: block; margin: auto;" /&gt;
+]
+--
+.pull-right[ 
+
+En general: 
+
+- Comparar la expresión de un gen entre dos grupos.
+
+- Encuentra secuencias de expresiones asociadas con cierto tipo de enfermedades.
+
+- Cuantificación de una imagen.
+
+- Valores de expresión.
+
+- Se trata como un problema de grandes volúmenes de datos.
+
+]
+---
+
+# Marketing
+
+Las decisiones que se toman en marketing son diversas
+&lt;img src="images/Marketing.png" width="80%" style="display: block; margin: auto;" /&gt;
+---
+# Evaluación de políticas públicas
+
+
+
+
+```r
+df %&gt;% 
+  ggplot(aes(x, y, color = as.factor(tratado)))+
+  geom_point() + geom_smooth( method = 'lm') + theme_bw() + theme(legend.position = "none")
+```
+
+.pull-left[
+&lt;img src="figs/unnamed-chunk-5-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[ 
+
+Problema de regresión discontínua **Ser Pilo Paga**, la variable `\(x\)` representa el puntaje en la prueba `Saber 11` mientras que las variable `\(y\)` representa alguna variable de resultado.
+
+`$$y_i = \alpha +\beta_1 x_i +\beta_2T_i + \epsilon_i$$`
+$$H_0: \beta_2 = 0; H_a: \beta_2 &gt; 0 $$
+
+- Considerar el ancho de banda.
+
+- Medición de la línea de base.
+
+]
+---
+
+# Evaluación de políticas públicas
+
+Las investigaciones suelen ser de tipo experimental o cuasiexperimental, en estos casos se cuenta con un grupo control. _Programas como comedores comunitarios, familias en acción, vivienda gratuita, mejoramiento de barrios, entre otros._
+
+.pull-left[
+&lt;img src="images/difdif.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+--
+.pull-right[ 
+
+- El parámetro de interés es: 
+
+`$$\theta = (\mu_{T_2} - \mu_{T_1}) - (\mu_{C_2} - \mu_{C_1})$$`
+
+- La hipótesis nula es que el programa no genera ningún impacto.
+`$$H_0: \theta = 0$$`
+
+- La hipótesis nula es que existe un impacto del programa.
+
+`$$H_a: \theta &gt; 0$$`
+
+- El efecto mínimo esperado `\(\Delta &gt; 0\)` y la potencia mínima esperada, son los valores a considerar en el cálculo del tamaño de la muestra. 
+
+]
+
+---
+
+# Evaluación de la Educación
+
+Pruebas **Saber 11** un cambio de más de 50 años
+
+.pull-left[
+&lt;img src="images/cuadernillo.png" width="70%" style="display: block; margin: auto;" /&gt;
+]
+--
+.pull-right[ 
+**Saber 11** calendario A: 
+- Un millón doscientos mil estudiantes.
+- Impresión `offset` por plancha y plegado.
+- Impresión `digital` por cuartilla.
+- 48 páginas, equivalentes a 12 cuartillas.
+- Nombres y apellidos en todas las páginas.
+- Tiempos de impresión y distribución de 25 días.
+- Algoritmo basado en principios de `big data`.
+]
+---
+
+# Salud: SARS-CoV-2
+El caricaturista [Toby Morris](https://twitter.com/XTOTL) realizó la siguiente ilustración que muestra la forma como evoluciona la pandemia
+
+&lt;img src="images/curve.gif" width="70%" style="display: block; margin: auto;" /&gt;
+---
+
+# Tasa de reproducción
+La tasa de reproducción `\(R_0\)`, se estima entre 2.5 y 3.5 para el SARS-CoV-2 [Spinoff](https://thespinoff.co.nz/) 
+
+&lt;img src="images/R0.gif" width="70%" style="display: block; margin: auto;" /&gt;
+---
+background-image: url(images/SarsCol.gif)
+background-size: contain
+---
+
+# Número de casos por departamento
+Los cálculos se realizaron usando los datos del [INS](https://www.ins.gov.co/Noticias/Paginas/Coronavirus.aspx). 33.354 casos confirmados al 03 de junio.
+
+&lt;img src="images/casos.png" width="68%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Tasa por cada 100 mil habitantes
+Los cálculos se realizaron usando los datos del [INS](https://www.ins.gov.co/Noticias/Paginas/Coronavirus.aspx)
+
+&lt;img src="images/tasa.png" width="70%" style="display: block; margin: auto;" /&gt;
+---
+background-image: url(images/TasaDptal.gif)
+background-size: contain
+---
+
+# Casos confirmados a nivel nacional
+Crecimiento exponencial y escala logarítmica
+
+.pull-left[
+&lt;img src="images/CasosNal.png" width="90%" style="display: block; margin: auto;" /&gt;
+]
+--
+.pull-right[
+&lt;img src="images/logCasosNal.png" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Seguimiento del SARS-CoV-2 en los últimos 30 días
+Un gráfico de dos ejes puede representar más información
+
+&lt;img src="images/dual.png" width="78%" style="display: block; margin: auto;" /&gt;
+
+---
+# Modelos
+
+
+.pull-left[
+*Modelos determinísticos*, Kermack \&amp; McKendrick 1927&lt;sup&gt;1  
+
+- SIR: Sanos, Infectados y Recuperados.
+- SEIR: Agrega el compartimiento de expuestos.
+- SEIRS: No supone inmunidad
+&lt;img src="images/SEIR.png" width="90%" style="display: block; margin: auto;" /&gt;
+.footnote[
+[1] Imagen tomada de [data for science](https://medium.com/data-for-science)  .
+]
+]
+--
+.pull-right[ 
+*Modelos estocásticos*
+- [Institute for Health Metrics and Evaluation (IHME)](https://covid19.healthdata.org/colombia): propone un modelo con efectos mixtos no lineal que permite estimar la tasa de mortalidad, en la especificación del modelo se utiliza información sobre el distanciamiento social y covariables específicas sobre la ubicación.
+- [Imperial College](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-13-europe-npi-impact/): proponen un modelo jerárquico bayesiano que permite estimar el número “real” de infectados además de inferir el impacto de las intervenciones no farmacéuticas para 11 países a partir de intervalos de credibilidad. 
+]
+
+---
+
+class: center, middle
+
+# Gracias!
+
+Diapositivas realizadas con el paquete R [**xaringan**](https://github.com/yihui/xaringan).
+
+---
+
+class: inverse, right, bottom
+
+
+&lt;img style="border-radius: 50%;" src="https://github.com/jgbabativam.png" width="150px"/&gt;
+
+# Encuéntrame en...
+
+[<i class="fab  fa-twitter "></i> @jgbabativam](http://twitter.com/jgbabativam)  
+[<i class="fab  fa-github "></i> @jgbabativam](http://github.com/jgbabativam)  
+[<i class="fas  fa-paper-plane "></i> jgbabativam@usal.es](mailto:jgbabativam@usal.es)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "dracula",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
