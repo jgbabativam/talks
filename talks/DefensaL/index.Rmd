@@ -50,7 +50,7 @@ options(htmltools.dir.version = FALSE)
 library(RefManageR)
 BibOptions(check.entries = FALSE, bib.style = "authoryear", style = "markdown", dashed = TRUE)
 
-bib <- ReadBib(here::here("./talks/DefensaL/References.bib"))
+bib <- ReadBib(here::here("References.bib"))
 ```
 
 class: title-slide, left, bottom
@@ -79,7 +79,7 @@ xaringanExtra::use_webcam()
 
 .left-column[
 ```{r, out.width= '100%'}
-knitr::include_graphics(here::here("talks/DefensaL/figs/LBTeor.png"))
+knitr::include_graphics(here::here("figs/LBTeor.png"))
 ```
 ]
 
@@ -132,7 +132,7 @@ knitr::include_graphics(here::here("talks/DefensaL/figs/LBTeor.png"))
 
 .pull-right[
 ```{r, out.width= '100%'}
-knitr::include_graphics(here::here("talks/DefensaL/figs/LBTeor.png"))
+knitr::include_graphics(here::here("figs/LBTeor.png"))
 ```
 ]
 
@@ -160,7 +160,7 @@ La matriz $\mathbf{X}$ entonces puede ser representada por marcadores $\mathbf{a
 ---
 # Biplot clásico
 ```{r, out.width= '60%'}
-knitr::include_graphics(here::here("talks/DefensaL/figs/BiplotClasicos.png"))
+knitr::include_graphics(here::here("figs/BiplotClasicos.png"))
 ```
 
 `r Citet(bib, "Villardon2006")`
@@ -227,14 +227,14 @@ Al fijar los marcadores fila $\mathbf{A}$ y ajustar el modelo logístico para $k
 
 .pull-left[
 ```{r, out.width= '75%', fig.cap="Tomado de Vicente-Villardón (2020)"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/SuperficieLB.png"))
+knitr::include_graphics(here::here("figs/SuperficieLB.png"))
 ```
 ]
 
 --
 .pull-right[
 ```{r, out.width= '100%', fig.cap="Tomado de Vicente-Villardón (2020)"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/SuperficieLBPlanos.png"))
+knitr::include_graphics(here::here("figs/SuperficieLBPlanos.png"))
 ```
 ]
 
@@ -244,14 +244,14 @@ Al fijar los marcadores fila $\mathbf{A}$ y ajustar el modelo logístico para $k
 
 .pull-left[
 ```{r, out.width= '95%', fig.cap="Tomado de Hernández (2016)"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/SuperficieLB2var.png"))
+knitr::include_graphics(here::here("figs/SuperficieLB2var.png"))
 ```
 ]
 
 --
 .pull-right[
 ```{r, out.width= '85%', fig.cap="Elaboración propia"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/LBTeor.png"))
+knitr::include_graphics(here::here("figs/LBTeor.png"))
 ```
 ]
 
@@ -485,7 +485,7 @@ La **tasa de error equilibrada** es $TEE = 1 - TPE$.
 # Validación cruzada en modelos supervisados
 
 ```{r, out.width= '90%'}
-knitr::include_graphics(here::here("talks/DefensaL/figs/ValidaCruzReg.png"))
+knitr::include_graphics(here::here("figs/ValidaCruzReg.png"))
 ```
 --
 <br><br>
@@ -495,7 +495,7 @@ Al omitir algunas filas del conjunto de datos, en los modelos supervisados no se
 # Validación cruzada en modelos supervisados
 
 ```{r, out.width= '52%'}
-knitr::include_graphics(here::here("talks/DefensaL/figs/MFoldsRegresion.png"))
+knitr::include_graphics(here::here("figs/MFoldsRegresion.png"))
 ```
 <br><br>
 
@@ -507,7 +507,7 @@ Al omitir algunas filas del conjunto de datos, en los modelos supervisados no se
 <br><br>
 
 ```{r, out.width= '80%'}
-knitr::include_graphics(here::here("talks/DefensaL/figs/BiplotELIM.png"))
+knitr::include_graphics(here::here("figs/BiplotELIM.png"))
 ```
 
 <br>
@@ -519,7 +519,7 @@ No se pueden estimar todos los elementos del espacio de parámetros.
 .blue[Wold (1978)]: Patrón de eliminación disperso o diagonal para identificar la cantidad de dimensiones en un PCA. 
 
 ```{r, out.width= '35%'}
-knitr::include_graphics(here::here("talks/DefensaL/figs/Wold_Kfold.png"))
+knitr::include_graphics(here::here("figs/Wold_Kfold.png"))
 ```
 --
 <br>
@@ -553,7 +553,7 @@ $$-log(p(\mathbf{X}; \mathbf{\Theta}, \mathbf{W}))= -\sum_{i=1}^n\sum_{j=1}^p w_
 
 ---
 ```{r echo=FALSE, out.width="42%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/FlowCV_LB.png"))
+knitr::include_graphics(here::here("figs/FlowCV_LB.png"))
 ```
 ---
 class: inverse, center, middle
@@ -587,7 +587,7 @@ class: center, middle
 # .left[Método MM]
 
 
-![](../figs/MM.gif)
+![](figs/MM.gif)
 <br> <br>
 
 .left[El método usa la función sustituta para encontrar el mínimo de la función objetivo.]
@@ -717,7 +717,7 @@ Por lo tanto, la mejor aproximación de $\mathbf{A}$ y $\mathbf{B}$ en la $l$-é
 
 .left-column[
 ```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/AlgoMM_BCD.png"))
+knitr::include_graphics(here::here("figs/AlgoMM_BCD.png"))
 ```
 ]
 
@@ -758,7 +758,7 @@ El algoritmo se basa en actualizar cada parámetro $\mathbf{\Theta} = (\theta_{1
 .pull-right[ 
 
 ```{r, out.width= '95%'}
-knitr::include_graphics(here::here("talks/DefensaL/figs/gradient-descent.png"))
+knitr::include_graphics(here::here("figs/gradient-descent.png"))
 ```
 ]
 
@@ -768,7 +768,7 @@ La cantidad de parámetros a estimar son $n k + p(k + 1)$. **En este algoritmo l
 ---
 # Algoritmo del gradiente conjugado
 
-![](../figs/gradient-descent2.png)
+![](figs/gradient-descent2.png)
 
 - **Estrategia de búsqueda en línea**: $\mathop{\arg \min}\limits_{\alpha > 0} \mathcal{L}\left(\mathbf{\Theta} + \alpha d_l \right).$
 - **Condiciones de Wolfe**: condición de Armijo (_disminución suficiente_) y de curvatura (_evita que $\alpha$ sea muy pequeño que no logre convergencia_).
@@ -795,7 +795,7 @@ Puesto que $\theta_{ij} = \mu_j + \mathbf{a}_i^T\mathbf{b}_j$, entonces $\mathca
 
 .left-column[
 ```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/AlgoConjugado.png"))
+knitr::include_graphics(here::here("figs/AlgoConjugado.png"))
 ```
 ]
 
@@ -845,7 +845,7 @@ class: inverse, center, middle
 $$RMSE(\mathbf{\Theta}) = \frac{\left|\left|\mathbf{\Theta} - \hat{\mathbf{\Theta}}\right|\right|_F^2}{\left|\left|\mathbf{\Theta}\right|\right|_F^2}.$$
 ---
 ```{r echo=FALSE, out.width="75%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/MonteCarlo.png"))
+knitr::include_graphics(here::here("figs/MonteCarlo.png"))
 ```
 ---
 # Resultados para matrices balanceadas
@@ -859,7 +859,7 @@ xaringanExtra::use_panelset()
 .panel[.panel-name[Error de validación]
 
 ```{r echo=FALSE, out.width="68%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/cv50-1.png"))
+knitr::include_graphics(here::here("figs/cv50-1.png"))
 ```
 
 ]
@@ -867,14 +867,14 @@ knitr::include_graphics(here::here("talks/DefensaL/figs/cv50-1.png"))
 .panel[.panel-name[Error de entrenamiento]
 
 ```{r echo=FALSE, out.width="68%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/err50-1.png"))
+knitr::include_graphics(here::here("figs/err50-1.png"))
 ```
 ]
 
 .panel[.panel-name[RMSE]
 
 ```{r echo=FALSE, out.width="68%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/RMSE50-1.png"))
+knitr::include_graphics(here::here("figs/RMSE50-1.png"))
 ```
 ]
 ]
@@ -885,7 +885,7 @@ knitr::include_graphics(here::here("talks/DefensaL/figs/RMSE50-1.png"))
 .panel[.panel-name[D=0.3]
 
 ```{r echo=FALSE, out.width="68%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/cv30-1.png"))
+knitr::include_graphics(here::here("figs/cv30-1.png"))
 ```
 
 ]
@@ -893,14 +893,14 @@ knitr::include_graphics(here::here("talks/DefensaL/figs/cv30-1.png"))
 .panel[.panel-name[D=0.2]
 
 ```{r echo=FALSE, out.width="68%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/cv20-1.png"))
+knitr::include_graphics(here::here("figs/cv20-1.png"))
 ```
 ]
 
 .panel[.panel-name[D=0.1]
 
 ```{r echo=FALSE, out.width="68%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/cv10-1.png"))
+knitr::include_graphics(here::here("figs/cv10-1.png"))
 ```
 ]
 ]
@@ -911,7 +911,7 @@ knitr::include_graphics(here::here("talks/DefensaL/figs/cv10-1.png"))
 .panel[.panel-name[D=0.3]
 
 ```{r echo=FALSE, out.width="68%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/r30-1.png"))
+knitr::include_graphics(here::here("figs/r30-1.png"))
 ```
 
 ]
@@ -919,14 +919,14 @@ knitr::include_graphics(here::here("talks/DefensaL/figs/r30-1.png"))
 .panel[.panel-name[D=0.2]
 
 ```{r echo=FALSE, out.width="68%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/r20-1.png"))
+knitr::include_graphics(here::here("figs/r20-1.png"))
 ```
 ]
 
 .panel[.panel-name[D=0.1]
 
 ```{r echo=FALSE, out.width="68%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/r10-1.png"))
+knitr::include_graphics(here::here("figs/r10-1.png"))
 ```
 ]
 ]
@@ -937,7 +937,7 @@ knitr::include_graphics(here::here("talks/DefensaL/figs/r10-1.png"))
 .panel[.panel-name[D=0.3]
 
 ```{r echo=FALSE, out.width="68%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/RMSE30-1.png"))
+knitr::include_graphics(here::here("figs/RMSE30-1.png"))
 ```
 
 ]
@@ -945,14 +945,14 @@ knitr::include_graphics(here::here("talks/DefensaL/figs/RMSE30-1.png"))
 .panel[.panel-name[D=0.2]
 
 ```{r echo=FALSE, out.width="68%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/RMSE20-1.png"))
+knitr::include_graphics(here::here("figs/RMSE20-1.png"))
 ```
 ]
 
 .panel[.panel-name[D=0.1]
 
 ```{r echo=FALSE, out.width="68%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/RMSE10-1.png"))
+knitr::include_graphics(here::here("figs/RMSE10-1.png"))
 ```
 ]
 ]
@@ -961,7 +961,7 @@ knitr::include_graphics(here::here("talks/DefensaL/figs/RMSE10-1.png"))
 El rendimiento computacional de los algoritmos se midió en un ordenador Intel Core i7-3517U con 6 GB de RAM. La tabla presenta el tiempo de ejecución en segundos para **100** réplicas con $k = 3$ y un criterio de parada de $\epsilon = 10^{-4}$.
 
 ```{r echo=FALSE, out.width="50%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/DesempenoComp.png"))
+knitr::include_graphics(here::here("figs/DesempenoComp.png"))
 ```
 
 ---
@@ -985,14 +985,14 @@ knitr::include_graphics(here::here("talks/DefensaL/figs/DesempenoComp.png"))
 # Número de dimensiones
 
 ```{r echo=FALSE, out.width="54%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/ValCruz_Cancer.png"))
+knitr::include_graphics(here::here("figs/ValCruz_Cancer.png"))
 ```
 
 ---
 # Biplot logístico para los datos de metilación 
 
 ```{r echo=FALSE, out.width="43%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/BiplotCancer.png"))
+knitr::include_graphics(here::here("figs/BiplotCancer.png"))
 ```
 
 Se usa el algoritmo CG-FR. Las líneas celulares en tres grupos, donde se identifican las variables con altas probabilidades de presentar niveles elevados de metilación.
@@ -1099,7 +1099,7 @@ $$\mathbf{Y}_l = \mathbf{\Gamma}\mathbf{\Lambda}\mathbf{\Gamma}^T$$
 # Algoritmo de estimación (MM-BCD)
 
 ```{r echo=FALSE, out.width="68%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/AlgoFaltantes.png"))
+knitr::include_graphics(here::here("figs/AlgoFaltantes.png"))
 ```
 
 **Los marcadores fila son obtenidos a partir de los marcadores de las columnas**, esto implica menos parámetros a estimar y la posibilidad de proyectar nuevas filas.
@@ -1110,7 +1110,7 @@ knitr::include_graphics(here::here("talks/DefensaL/figs/AlgoFaltantes.png"))
 Se analiza una muestra de **7.165 eventos** ocurridos entre los años 1980 y 2010 para 14 tipos de violencia. Los datos son organizados en una matriz binaria, $\mathbf{X}$, donde $x_{ij}$ se codifica con 1 cuando en el evento $i$ se usó la violencia $j$ y 0 en otro caso. La matriz tiene un $15.4\%$ de unos y las proporciones de uso de las violencias estuvieron en un rango entre $0.05$ y $0.56$, mientras que la proporción de datos faltantes es del $4.7\%$. 
 
 ```{r echo=FALSE, out.width="40%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/BiplotConflict.png"))
+knitr::include_graphics(here::here("figs/BiplotConflict.png"))
 ```
 
 ---
@@ -1120,7 +1120,7 @@ Sensibilidad y especificidad para cada variable en el ajuste del modelo LB usand
 <br>
 
 ```{r echo=FALSE, out.width="55%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/SensibilidadConflict.png"))
+knitr::include_graphics(here::here("figs/SensibilidadConflict.png"))
 ```
 
 ---
@@ -1134,7 +1134,7 @@ Se desarrolló el paquete **BiplotML** que incluye 11 funciones principales y 8 
 .left-column[
 
 ```{r, out.width= '90%'}
-knitr::include_graphics(here::here("talks/DefensaL/figs/imageBiplot.png"))
+knitr::include_graphics(here::here("figs/imageBiplot.png"))
 ```
 ]
 --
@@ -1165,7 +1165,7 @@ library(BiplotML)
 ```
 
 ```{r echo=FALSE, out.width="40%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/InstalaBiplotML.png"))
+knitr::include_graphics(here::here("figs/InstalaBiplotML.png"))
 ```
 ---
 # Ejemplos: Elección de $k$
@@ -1179,7 +1179,7 @@ cvMet_MM <- cv_LogBip(data = binMethy, k=0:5, method = "MM")
 
 .pull-left[
 ```{r echo=FALSE, out.width="68%"}
-knitr::include_graphics(here::here("talks/DefensaL/figs/cvMethy_BML.png"))
+knitr::include_graphics(here::here("figs/cvMethy_BML.png"))
 ```
 ]
 
@@ -1244,7 +1244,7 @@ res <- bootBLB(x = binMethy, method = "CG", type = 1,
 ```
 
 ```{r, out.width= '50%'}
-knitr::include_graphics(here::here("talks/DefensaL/figs/bipBoot.png"))
+knitr::include_graphics(here::here("figs/bipBoot.png"))
 ```
 ---
 class: inverse, center, middle
@@ -1273,21 +1273,21 @@ Con base en el trabajo realizado se puede concluir:
 # Congresos
 
 ```{r, out.width= '85%'}
-knitr::include_graphics(here::here("talks/DefensaL/figs/Congresos.png"))
+knitr::include_graphics(here::here("figs/Congresos.png"))
 ```
 
 ---
 # Paquete de R
 
 ```{r, out.width= '65%'}
-knitr::include_graphics(here::here("talks/DefensaL/figs/Paquete.png"))
+knitr::include_graphics(here::here("figs/Paquete.png"))
 ```
 
 ---
 # Artículos
 
 ```{r, out.width= '90%'}
-knitr::include_graphics(here::here("talks/DefensaL/figs/papers.png"))
+knitr::include_graphics(here::here("figs/papers.png"))
 ```
 
 ---
