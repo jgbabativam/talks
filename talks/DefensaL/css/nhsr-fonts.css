@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
+
+body {
+  font-family: "Arial", "Frutiger", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Arial", "Frutiger", sans-serif;
+}
+
+.remark-code, .remark-inline-code {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.theorem {
+  display: block;
+  font-style: italic;
+  font-size: 24px;
+  font-family: "Times New Roman";
+  color: black;
+  border-radius: 10px;
+  background-color: rgb(222,222,231);
+  box-shadow: 5px 10px 8px #888888;
+}
+.theorem::before {
+  content: "Teorema. ";
+  font-weight: bold;
+  font-style: normal;
+  display: inline-block;
+  width: -webkit-fill-available;
+  color: white;
+  border-radius: 10px 10px 0 0;
+  padding: 10px 5px 5px 15px;
+  background-color: rgb(38, 38, 134);
+}
+.theorem p {
+  padding: 15px 15px 15px 15px;
+}
