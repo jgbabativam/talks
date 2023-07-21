@@ -118,7 +118,7 @@ knitr::include_graphics(here::here("talks/Ecuador/figs/Clasicos1.png"))
 # Problema de optimización en ACP
 
 ```{r, out.width= '90%'}
-knitr::include_graphics(here::here("talks/Ecuador/figs/Mindist.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/Mindist1.png"))
 ```
 
 ---
