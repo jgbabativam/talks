@@ -248,7 +248,7 @@ Al fijar los marcadores fila $\mathbf{A}$ y ajustar el modelo logístico para $k
 
 .pull-left[
 ```{r, out.width= '75%', fig.cap="Tomado de Vicente-Villardón (2020)"}
-knitr::include_graphics(here::here("talks/Ecuador/figs/SuperficieLB.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/SuperficieLB.PNG"))
 ```
 ]
 
