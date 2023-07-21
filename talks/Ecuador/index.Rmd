@@ -132,14 +132,14 @@ knitr::include_graphics(here::here("talks/Ecuador/figs/ProcesoACP1.png"))
 # Análisis de Componentes Principales
 
 ```{r, out.width= '95%'}
-knitr::include_graphics(here::here("talks/Ecuador/figs/CargasACP.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/CargasACP1.png"))
 ```
 
 ---
 # Análisis de Componentes Principales
 
 ```{r, out.width= '98%'}
-knitr::include_graphics(here::here("talks/Ecuador/figs/RecACP.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/RecACP1.png"))
 ```
 
 ---
@@ -156,7 +156,7 @@ El prefijo **"bi"** se refiere a la superposición, en la misma representación,
 
 .pull-right[
 ```{r, out.width= '85%'}
-knitr::include_graphics(here::here("talks/Ecuador/figs/figBiplot.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/figBiplot1.png"))
 ```
 .right[(Cubilla-Montilla, 2021)]
 ]
