@@ -125,7 +125,7 @@ knitr::include_graphics(here::here("talks/Ecuador/figs/Mindist1.png"))
 # Análisis de Componentes Principales
 
 ```{r, out.width= '70%'}
-knitr::include_graphics(here::here("talks/Ecuador/figs/ProcesoACP.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/ProcesoACP1.png"))
 ```
 
 ---
