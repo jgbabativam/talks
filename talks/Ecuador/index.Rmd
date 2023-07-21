@@ -111,35 +111,35 @@ class: inverse, center, middle
 # Métodos clásicos
 
 ```{r, out.width= '90%'}
-knitr::include_graphics(here::here("talks/Ecuador/figs/Clasicos.PNG"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/Clasicos1.png"))
 ```
 
 ---
 # Problema de optimización en ACP
 
 ```{r, out.width= '90%'}
-knitr::include_graphics(here::here("talks/Ecuador/figs/Mindist.PNG"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/Mindist.png"))
 ```
 
 ---
 # Análisis de Componentes Principales
 
 ```{r, out.width= '70%'}
-knitr::include_graphics(here::here("talks/Ecuador/figs/ProcesoACP.PNG"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/ProcesoACP.png"))
 ```
 
 ---
 # Análisis de Componentes Principales
 
 ```{r, out.width= '95%'}
-knitr::include_graphics(here::here("talks/Ecuador/figs/CargasACP.PNG"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/CargasACP.png"))
 ```
 
 ---
 # Análisis de Componentes Principales
 
 ```{r, out.width= '98%'}
-knitr::include_graphics(here::here("talks/Ecuador/figs/RecACP.PNG"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/RecACP.png"))
 ```
 
 ---
@@ -156,7 +156,7 @@ El prefijo **"bi"** se refiere a la superposición, en la misma representación,
 
 .pull-right[
 ```{r, out.width= '85%'}
-knitr::include_graphics(here::here("talks/Ecuador/figs/figBiplot.PNG"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/figBiplot.png"))
 ```
 .right[(Cubilla-Montilla, 2021)]
 ]
@@ -196,7 +196,7 @@ knitr::include_graphics(here::here("talks/Ecuador/figs/BiplotClasicos.png"))
 
 ---
 class: inverse, center, middle
-background-image: url(figs/ImageBinary.PNG)
+background-image: url(figs/ImageBinary.png)
 background-size: contain
 
 ---
@@ -255,7 +255,7 @@ knitr::include_graphics(here::here("talks/Ecuador/figs/SuperficieLB.PNG"))
 --
 .pull-right[
 ```{r, out.width= '100%', fig.cap="Tomado de Vicente-Villardón (2020)"}
-knitr::include_graphics(here::here("talks/Ecuador/figs/SuperficieLBPlanos.PNG"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/SuperficieLBPlanos.png"))
 ```
 ]
 
@@ -265,7 +265,7 @@ Al fijar los marcadores fila $\mathbf{A}$ y ajustar el modelo logístico para $k
 
 .pull-left[
 ```{r, out.width= '95%', fig.cap="Tomado de Hernández (2016)"}
-knitr::include_graphics(here::here("talks/Ecuador/figs/SuperficieLB2var.PNG"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/SuperficieLB2var.png"))
 ```
 ]
 
@@ -936,7 +936,7 @@ knitr::include_graphics(here::here("talks/Ecuador/figs/RMSE10-1.png"))
 El rendimiento computacional de los algoritmos se midió en un ordenador Intel Core i7-3517U con 6 GB de RAM. La tabla presenta el tiempo de ejecución en segundos para **100** réplicas con $k = 3$ y un criterio de parada de $\epsilon = 10^{-4}$.
 
 ```{r echo=FALSE, out.width="50%"}
-knitr::include_graphics(here::here("talks/Ecuador/figs/DesempenoComp.PNG"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/DesempenoComp.png"))
 ```
 
 ---
@@ -960,14 +960,14 @@ knitr::include_graphics(here::here("talks/Ecuador/figs/DesempenoComp.PNG"))
 # Número de dimensiones
 
 ```{r echo=FALSE, out.width="54%"}
-knitr::include_graphics(here::here("talks/Ecuador/figs/ValCruz_Cancer.PNG"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/ValCruz_Cancer.png"))
 ```
 
 ---
 # Biplot logístico para los datos de metilación 
 
 ```{r echo=FALSE, out.width="43%"}
-knitr::include_graphics(here::here("talks/Ecuador/figs/BiplotCancer.PNG"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/BiplotCancer.png"))
 ```
 
 Se usa el algoritmo CG-FR. Las líneas celulares en tres grupos, donde se identifican las variables con altas probabilidades de presentar niveles elevados de metilación.
@@ -1109,7 +1109,7 @@ Se desarrolló el paquete **BiplotML** que incluye 11 funciones principales y 8 
 .left-column[
 
 ```{r, out.width= '90%'}
-knitr::include_graphics(here::here("talks/Ecuador/figs/imageBiplot.PNG"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/imageBiplot.png"))
 ```
 ]
 --
@@ -1225,7 +1225,7 @@ knitr::include_graphics(here::here("talks/Ecuador/figs/bipBoot.png"))
 # Paquete de R
 
 ```{r, out.width= '65%'}
-knitr::include_graphics(here::here("talks/Ecuador/figs/Paquete.PNG"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/Paquete.png"))
 ```
 
 ---
