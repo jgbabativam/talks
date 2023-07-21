@@ -19,6 +19,7 @@ output:
       highlightLanguage: ["r"]
       countIncrementalSlides: false
       ratio: "16:9"
+      beforeInit: "MathJax = { tex: { inlineMath: [['\\\\(','\\\\)']] } }"
 ---
 
 ```{r setup, include = FALSE}
