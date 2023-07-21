@@ -176,7 +176,7 @@ La matriz `\(\mathbf{X}\)` entonces puede ser representada por marcadores `\(\ma
 
 ---
 class: inverse, center, middle
-background-image: url(figs/ImageBinary.png)
+background-image: url(figs/ImageBinary1.png)
 background-size: contain
 
 ---
@@ -236,7 +236,7 @@ Al fijar los marcadores fila `\(\mathbf{A}\)` y ajustar el modelo logístico par
 --
 .pull-right[
 &lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="figs/SuperficieLBPlanos.png" alt="Tomado de Vicente-Villardón (2020)" width="100%" /&gt;
+&lt;img src="figs/SuperficieLBPlanos1.png" alt="Tomado de Vicente-Villardón (2020)" width="100%" /&gt;
 &lt;p class="caption"&gt;Tomado de Vicente-Villardón (2020)&lt;/p&gt;
 &lt;/div&gt;
 ]
@@ -247,7 +247,7 @@ Al fijar los marcadores fila `\(\mathbf{A}\)` y ajustar el modelo logístico par
 
 .pull-left[
 &lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="figs/SuperficieLB2var.png" alt="Tomado de Hernández (2016)" width="95%" /&gt;
+&lt;img src="figs/SuperficieLB2var1.png" alt="Tomado de Hernández (2016)" width="95%" /&gt;
 &lt;p class="caption"&gt;Tomado de Hernández (2016)&lt;/p&gt;
 &lt;/div&gt;
 ]
@@ -628,7 +628,7 @@ Por lo tanto, la mejor aproximación de `\(\mathbf{A}\)` y `\(\mathbf{B}\)` en l
 # Algoritmo de descenso coordinado por bloques
 
 .left-column[
-&lt;img src="figs/AlgoMM_BCD.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/AlgoMM_BCD1.png" width="100%" style="display: block; margin: auto;" /&gt;
 ]
 
 .right-column[
@@ -667,7 +667,7 @@ El algoritmo se basa en actualizar cada parámetro `\(\mathbf{\Theta} = (\theta_
 --
 .pull-right[ 
 
-&lt;img src="figs/gradient-descent.png" width="95%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/gradient-descent1.png" width="95%" style="display: block; margin: auto;" /&gt;
 ]
 
 La cantidad de parámetros a estimar son `\(n k + p(k + 1)\)`. **En este algoritmo la velocidad de aprendizaje, `\(\alpha\)` debe elegirse de forma manual**.
@@ -676,7 +676,7 @@ La cantidad de parámetros a estimar son `\(n k + p(k + 1)\)`. **En este algorit
 ---
 # Algoritmo del gradiente conjugado
 
-![](figs/gradient-descent2.png)
+![](figs/gradient-descent2_1.png)
 
 - **Estrategia de búsqueda en línea**: `\(\mathop{\arg \min}\limits_{\alpha &gt; 0} \mathcal{L}\left(\mathbf{\Theta} + \alpha d_l \right).\)`
 - **Condiciones de Wolfe**: condición de Armijo (_disminución suficiente_) y de curvatura (_evita que `\(\alpha\)` sea muy pequeño que no logre convergencia_).
@@ -702,7 +702,7 @@ Puesto que `\(\theta_{ij} = \mu_j + \mathbf{a}_i^T\mathbf{b}_j\)`, entonces `\(\
 # Algoritmo del gradiente conjugado
 
 .left-column[
-&lt;img src="figs/AlgoConjugado.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/AlgoConjugado1.png" width="100%" style="display: block; margin: auto;" /&gt;
 ]
 
 .right-column[
@@ -760,7 +760,7 @@ class: inverse, center, middle
 .panelset[
 .panel[.panel-name[Error de validación]
 
-&lt;img src="figs/cv50-1.png" width="68%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/cv50-1_1.png" width="68%" style="display: block; margin: auto;" /&gt;
 
 ]
 
@@ -838,7 +838,7 @@ class: inverse, center, middle
 # Desempeño computacional
 El rendimiento computacional de los algoritmos se midió en un ordenador Intel Core i7-3517U con 6 GB de RAM. La tabla presenta el tiempo de ejecución en segundos para **100** réplicas con `\(k = 3\)` y un criterio de parada de `\(\epsilon = 10^{-4}\)`.
 
-&lt;img src="figs/DesempenoComp.png" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/DesempenoComp1.png" width="50%" style="display: block; margin: auto;" /&gt;
 
 ---
 # Aplicación
@@ -860,12 +860,12 @@ El rendimiento computacional de los algoritmos se midió en un ordenador Intel C
 ---
 # Número de dimensiones
 
-&lt;img src="figs/ValCruz_Cancer.png" width="54%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/ValCruz_Cancer1.png" width="54%" style="display: block; margin: auto;" /&gt;
 
 ---
 # Biplot logístico para los datos de metilación 
 
-&lt;img src="figs/BiplotCancer.png" width="43%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/BiplotCancer1.png" width="43%" style="display: block; margin: auto;" /&gt;
 
 Se usa el algoritmo CG-FR. Las líneas celulares en tres grupos, donde se identifican las variables con altas probabilidades de presentar niveles elevados de metilación.
 
@@ -970,7 +970,7 @@ La traza se maximiza cuando `\(\mathbf{V}\)` está compuesta por los `\(k\)` pri
 ---
 # Algoritmo de estimación (MM-BCD)
 
-&lt;img src="figs/AlgoFaltantes.png" width="68%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/AlgoFaltantes1.png" width="68%" style="display: block; margin: auto;" /&gt;
 
 **Los marcadores fila son obtenidos a partir de los marcadores de las columnas**, esto implica menos parámetros a estimar y la posibilidad de proyectar nuevas filas.
 
@@ -979,7 +979,7 @@ La traza se maximiza cuando `\(\mathbf{V}\)` está compuesta por los `\(k\)` pri
 
 Se analiza una muestra de **7.165 eventos** ocurridos entre los años 1980 y 2010 para 14 tipos de violencia. Los datos son organizados en una matriz binaria, `\(\mathbf{X}\)`, donde `\(x_{ij}\)` se codifica con 1 cuando en el evento `\(i\)` se usó la violencia `\(j\)` y 0 en otro caso. La matriz tiene un `\(15.4\%\)` de unos y las proporciones de uso de las violencias estuvieron en un rango entre `\(0.05\)` y `\(0.56\)`, mientras que la proporción de datos faltantes es del `\(4.7\%\)`. 
 
-&lt;img src="figs/BiplotConflict.png" width="40%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/BiplotConflict1.png" width="40%" style="display: block; margin: auto;" /&gt;
 
 ---
 # Aplicación: Conflicto Armado en Colombia
@@ -987,7 +987,7 @@ Se analiza una muestra de **7.165 eventos** ocurridos entre los años 1980 y 201
 Sensibilidad y especificidad para cada variable en el ajuste del modelo LB usando el método de proyección de datos 
 &lt;br&gt;
 
-&lt;img src="figs/SensibilidadConflict.png" width="55%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/SensibilidadConflict1.png" width="55%" style="display: block; margin: auto;" /&gt;
 
 ---
 class: inverse, center, middle
@@ -999,7 +999,7 @@ class: inverse, center, middle
 Se desarrolló el paquete **BiplotML** que incluye 11 funciones principales y 8 funciones auxiliares
 .left-column[
 
-&lt;img src="figs/imageBiplot.png" width="90%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/imageBiplot1.png" width="90%" style="display: block; margin: auto;" /&gt;
 ]
 --
 .right-column[ 
@@ -1029,7 +1029,7 @@ devtools::install_github("jgbabativam/BiplotML")
 library(BiplotML)
 ```
 
-&lt;img src="figs/InstalaBiplotML.png" width="40%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/InstalaBiplotML1.png" width="40%" style="display: block; margin: auto;" /&gt;
 ---
 # Ejemplos: Elección de `\(k\)`
 
@@ -1221,7 +1221,7 @@ res &lt;- bootBLB(x = binMethy, method = "CG", type = 1,
 ---
 # Paquete de R
 
-&lt;img src="figs/Paquete.png" width="65%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/Paquete1.png" width="65%" style="display: block; margin: auto;" /&gt;
 
 ---
 # Referencias

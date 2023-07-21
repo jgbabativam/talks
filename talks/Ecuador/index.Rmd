@@ -196,7 +196,7 @@ knitr::include_graphics(here::here("talks/Ecuador/figs/BiplotClasicos.png"))
 
 ---
 class: inverse, center, middle
-background-image: url(figs/ImageBinary.png)
+background-image: url(figs/ImageBinary1.png)
 background-size: contain
 
 ---
@@ -255,7 +255,7 @@ knitr::include_graphics(here::here("talks/Ecuador/figs/SuperficieLB.PNG"))
 --
 .pull-right[
 ```{r, out.width= '100%', fig.cap="Tomado de Vicente-Villardón (2020)"}
-knitr::include_graphics(here::here("talks/Ecuador/figs/SuperficieLBPlanos.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/SuperficieLBPlanos1.png"))
 ```
 ]
 
@@ -265,7 +265,7 @@ Al fijar los marcadores fila $\mathbf{A}$ y ajustar el modelo logístico para $k
 
 .pull-left[
 ```{r, out.width= '95%', fig.cap="Tomado de Hernández (2016)"}
-knitr::include_graphics(here::here("talks/Ecuador/figs/SuperficieLB2var.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/SuperficieLB2var1.png"))
 ```
 ]
 
@@ -692,7 +692,7 @@ Por lo tanto, la mejor aproximación de $\mathbf{A}$ y $\mathbf{B}$ en la $l$-é
 
 .left-column[
 ```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics(here::here("talks/Ecuador/figs/AlgoMM_BCD.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/AlgoMM_BCD1.png"))
 ```
 ]
 
@@ -733,7 +733,7 @@ El algoritmo se basa en actualizar cada parámetro $\mathbf{\Theta} = (\theta_{1
 .pull-right[ 
 
 ```{r, out.width= '95%'}
-knitr::include_graphics(here::here("talks/Ecuador/figs/gradient-descent.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/gradient-descent1.png"))
 ```
 ]
 
@@ -743,7 +743,7 @@ La cantidad de parámetros a estimar son $n k + p(k + 1)$. **En este algoritmo l
 ---
 # Algoritmo del gradiente conjugado
 
-![](figs/gradient-descent2.png)
+![](figs/gradient-descent2_1.png)
 
 - **Estrategia de búsqueda en línea**: $\mathop{\arg \min}\limits_{\alpha > 0} \mathcal{L}\left(\mathbf{\Theta} + \alpha d_l \right).$
 - **Condiciones de Wolfe**: condición de Armijo (_disminución suficiente_) y de curvatura (_evita que $\alpha$ sea muy pequeño que no logre convergencia_).
@@ -770,7 +770,7 @@ Puesto que $\theta_{ij} = \mu_j + \mathbf{a}_i^T\mathbf{b}_j$, entonces $\mathca
 
 .left-column[
 ```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics(here::here("talks/Ecuador/figs/AlgoConjugado.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/AlgoConjugado1.png"))
 ```
 ]
 
@@ -834,7 +834,7 @@ xaringanExtra::use_panelset()
 .panel[.panel-name[Error de validación]
 
 ```{r echo=FALSE, out.width="68%"}
-knitr::include_graphics(here::here("talks/Ecuador/figs/cv50-1.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/cv50-1_1.png"))
 ```
 
 ]
@@ -936,7 +936,7 @@ knitr::include_graphics(here::here("talks/Ecuador/figs/RMSE10-1.png"))
 El rendimiento computacional de los algoritmos se midió en un ordenador Intel Core i7-3517U con 6 GB de RAM. La tabla presenta el tiempo de ejecución en segundos para **100** réplicas con $k = 3$ y un criterio de parada de $\epsilon = 10^{-4}$.
 
 ```{r echo=FALSE, out.width="50%"}
-knitr::include_graphics(here::here("talks/Ecuador/figs/DesempenoComp.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/DesempenoComp1.png"))
 ```
 
 ---
@@ -960,14 +960,14 @@ knitr::include_graphics(here::here("talks/Ecuador/figs/DesempenoComp.png"))
 # Número de dimensiones
 
 ```{r echo=FALSE, out.width="54%"}
-knitr::include_graphics(here::here("talks/Ecuador/figs/ValCruz_Cancer.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/ValCruz_Cancer1.png"))
 ```
 
 ---
 # Biplot logístico para los datos de metilación 
 
 ```{r echo=FALSE, out.width="43%"}
-knitr::include_graphics(here::here("talks/Ecuador/figs/BiplotCancer.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/BiplotCancer1.png"))
 ```
 
 Se usa el algoritmo CG-FR. Las líneas celulares en tres grupos, donde se identifican las variables con altas probabilidades de presentar niveles elevados de metilación.
@@ -1074,7 +1074,7 @@ $$\mathbf{Y}_l = \mathbf{\Gamma}\mathbf{\Lambda}\mathbf{\Gamma}^T$$
 # Algoritmo de estimación (MM-BCD)
 
 ```{r echo=FALSE, out.width="68%"}
-knitr::include_graphics(here::here("talks/Ecuador/figs/AlgoFaltantes.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/AlgoFaltantes1.png"))
 ```
 
 **Los marcadores fila son obtenidos a partir de los marcadores de las columnas**, esto implica menos parámetros a estimar y la posibilidad de proyectar nuevas filas.
@@ -1085,7 +1085,7 @@ knitr::include_graphics(here::here("talks/Ecuador/figs/AlgoFaltantes.png"))
 Se analiza una muestra de **7.165 eventos** ocurridos entre los años 1980 y 2010 para 14 tipos de violencia. Los datos son organizados en una matriz binaria, $\mathbf{X}$, donde $x_{ij}$ se codifica con 1 cuando en el evento $i$ se usó la violencia $j$ y 0 en otro caso. La matriz tiene un $15.4\%$ de unos y las proporciones de uso de las violencias estuvieron en un rango entre $0.05$ y $0.56$, mientras que la proporción de datos faltantes es del $4.7\%$. 
 
 ```{r echo=FALSE, out.width="40%"}
-knitr::include_graphics(here::here("talks/Ecuador/figs/BiplotConflict.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/BiplotConflict1.png"))
 ```
 
 ---
@@ -1095,7 +1095,7 @@ Sensibilidad y especificidad para cada variable en el ajuste del modelo LB usand
 <br>
 
 ```{r echo=FALSE, out.width="55%"}
-knitr::include_graphics(here::here("talks/Ecuador/figs/SensibilidadConflict.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/SensibilidadConflict1.png"))
 ```
 
 ---
@@ -1109,7 +1109,7 @@ Se desarrolló el paquete **BiplotML** que incluye 11 funciones principales y 8 
 .left-column[
 
 ```{r, out.width= '90%'}
-knitr::include_graphics(here::here("talks/Ecuador/figs/imageBiplot.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/imageBiplot1.png"))
 ```
 ]
 --
@@ -1140,7 +1140,7 @@ library(BiplotML)
 ```
 
 ```{r echo=FALSE, out.width="40%"}
-knitr::include_graphics(here::here("talks/Ecuador/figs/InstalaBiplotML.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/InstalaBiplotML1.png"))
 ```
 ---
 # Ejemplos: Elección de $k$
@@ -1225,7 +1225,7 @@ knitr::include_graphics(here::here("talks/Ecuador/figs/bipBoot.png"))
 # Paquete de R
 
 ```{r, out.width= '65%'}
-knitr::include_graphics(here::here("talks/Ecuador/figs/Paquete.png"))
+knitr::include_graphics(here::here("talks/Ecuador/figs/Paquete1.png"))
 ```
 
 ---
